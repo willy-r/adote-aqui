@@ -1,32 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     
-    <title>ResiliaPet — Adote aqui!</title>
+    <title>AdoteAqui — Adote agora!</title>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/190e245c5e.js" crossorigin="anonymous"></script>
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
   </head>
   <body>
-    <header class="header">
-      <nav class="nav">
-        <h1 class="nav__logo">
-          <a href="">AdoteAqui!</a>
-        </h1>
+    <div class="container">
+      <header class="header">
+        <nav class="nav">
+          <a class="nav__logo" href="">
+            <span class="fas fa-paw"></span> AdoteAqui !
+          </a>
+  
+          <ul class="nav__links">
+            <li>
+              <a class="nav__link" href="#home">Início</a>
+            </li>
+            <li>
+              <a class="nav__link nav__link--bgc-white" href="#adoption">Adoção</a>
+            </li>
+            <!-- Adptar o layout e implementar depois.
+              <li>
+                <a class="nav__link" href="#sobre">Sobre</a>
+              </li>
+              <li>
+                <a class="nav__link" href="#contato">Contato</a>
+              </li> -->
+          </ul> <!-- .nav__links -->
+        </nav> <!-- .nav -->
+      </header>
 
-        <ul class="nav__links">
-          <li>
-            <a class="nav__link" href="#home">Home</a>
-          </li>
-          <li>
-            <a class="nav__link" href="#sobre">Sobre</a>
-          </li>
-          <li>
-            <a class="nav__link" href="#contato">Contato</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+      <section class="homepage">
+        <div class="homepage__content">
+          <h1 class="title">
+            Mude <strong>vidas</strong>
+          </h1>
+          <p class="homepage__text">
+            Você não vai mudar o mundo adotando um cachorro, mas você vai mudar o mundo desse cachorro.
+          </p>
+          <button class="btn" type="button">Adotar</button>
+        </div> <!-- .homepage__content -->
+      </section> <!-- .homepage -->
+    </div>
   </body>
 </html>
