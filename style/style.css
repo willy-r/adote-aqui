@@ -3,6 +3,7 @@
   2. Header
   3. Homepage section
   4. Adoption section
+  5. Footer
 */
 
 
@@ -10,12 +11,14 @@
 
 :root {
   --ff-lily-script-one-400: 'Lily Script One', cursive;
+  --ff-open-sans-400: 'Open Sans', sans-serif;
 
   --clr-primary: #ffed47;
   --clr-secondary: #e63946;
 
   --clr-white: #fff;
   --clr-black: #000;
+  --clr-black-bgc: rgba(0, 0, 0, .75);
 }
 
 html { scroll-behavior: smooth; }
@@ -24,19 +27,32 @@ body { font-family: var(--ff-lily-script-one-400); }
 
 .container { position: relative; }
 
+.logo {
+  font: 2.25rem /* 36px */ var(--ff-lily-script-one-400);
+  color: var(--clr-primary);
+  transition: opacity 250ms ease-in-out;
+}
+
+.logo:hover,
+.logo:focus { opacity: .5; }
+
+.logo > span { color: var(--clr-white) ; }
+
 .title {
-  font-size: 5rem; /* 80px */
+  font: 5rem /* 80px */ var(--ff-lily-script-one-400);
   color: var(--clr-primary);
 }
 
 .title > strong { text-decoration: underline double var(--clr-primary) 2px; }
 
-.title--small {
+.title--medium {
   font-size: 3.75rem; /* 60px */
   color: var(--clr-black);
 }
 
-.title--small > strong { text-decoration-color: var(--clr-black); }
+.title--medium > strong { text-decoration-color: var(--clr-black); }
+
+.title--small { font-size: 2.5rem; /* 40px */ }
 
 .btn {
   display: inline-block;
@@ -74,17 +90,6 @@ body { font-family: var(--ff-lily-script-one-400); }
   justify-content: space-between;
   align-items: center;
 }
-
-.nav__logo {
-  font-size: 2.25rem; /* 36px */
-  color: var(--clr-primary);
-  transition: opacity 250ms ease-in-out;
-}
-
-.nav__logo:hover,
-.nav__logo:focus { opacity: .5; }
-
-.nav__logo > span { color: var(--clr-white) ; }
 
 .nav__links { display: flex; }
 
@@ -138,7 +143,7 @@ body { font-family: var(--ff-lily-script-one-400); }
 
 .adoption { padding: 60px 105px; }
 
-.adoption > .title--small {
+.adoption > .title--medium {
   margin-bottom: 50px;
   text-align: center;
 }
@@ -191,7 +196,7 @@ body { font-family: var(--ff-lily-script-one-400); }
   opacity: 0; /* Hidden by default, appears when mouse is hovering the card. */
 }
 
-.card__pet-title {
+.card__pet-name {
   /* Title appears when mouse is hovering the card. */
   width: 0;
   font-size: 0;
@@ -214,8 +219,8 @@ body { font-family: var(--ff-lily-script-one-400); }
 .card:hover .card__pet-about,
 .card:focus .card__pet-about { opacity: 1; }
 
-.card:hover .card__pet-title,
-.card:focus .card__pet-title {
+.card:hover .card__pet-name,
+.card:focus .card__pet-name {
   width: 100%;
   font-size: 1.75rem; /* 28px */
 }
@@ -224,4 +229,89 @@ body { font-family: var(--ff-lily-script-one-400); }
 .card:focus .card__pet-info {
   width: 100%;
   font-size: 1.25rem; /* 20px */
+}
+
+
+/* 5. Footer */
+
+.footer { background: var(--clr-black) url(../images/background-footer.jpg) center/cover no-repeat; }
+
+.footer__content {
+  padding-bottom: 5px;
+  font-family: var(--ff-open-sans-400);
+  color: var(--clr-white);
+  text-align: center;
+  background-color: var(--clr-black-bgc);
+}
+
+.footer__wrapper-content { padding: 40px; }
+
+.footer__about { margin-bottom: 25px; }
+
+.footer__about > .title--small { margin-bottom: 10px; }
+
+.footer__text {
+  display: inline-block;
+  width: 80%;
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.4em;
+  text-align: center;
+}
+
+.footer__text strong {
+  color: var(--clr-primary);
+  font-weight: 600;
+}
+
+.footer__text a { transition: opacity 200ms ease-in-out; }
+
+.footer__text a:hover,
+.footer__text a:focus { opacity: .5; }
+
+.footer__text > span { font-size: 1rem; /* 16px */ }
+
+.footer__links {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__social-medias {
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem; /* 40px */
+}
+
+.footer__social-medias::before {
+  content: '';
+  position: absolute;
+  right: calc(100% / 2);
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  border-left: 1px solid var(--clr-white);
+  opacity: .5;
+}
+
+.footer__social-medias > li + li { margin-left: .375em; }
+
+.footer__social-medias > li > a {
+  display: inline-block;
+  transition: all 250ms ease-in;
+}
+
+.footer__social-medias > li > a:hover,
+.footer__social-medias > li > a:focus {
+  box-shadow: 0 .2em .2em -.125em var(--clr-primary);
+  transform: translateY(-.25em);
+}
+
+.footer__copyright {
+  background-color: var(--clr-black);
+  border-radius: 30px;
+}
+
+.footer__copyright > footer__text {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
