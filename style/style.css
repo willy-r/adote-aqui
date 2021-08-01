@@ -244,7 +244,7 @@ body { font-family: var(--ff-lily-script-one-400); }
   background-color: var(--clr-black-bgc);
 }
 
-.footer__wrapper-content { padding: 40px; }
+.footer__wrapper-content { padding: 60px; }
 
 .footer__about { margin-bottom: 25px; }
 
