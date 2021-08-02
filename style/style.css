@@ -282,8 +282,6 @@ body { font-family: var(--ff-lily-script-one-400); }
 .footer__text a:hover,
 .footer__text a:focus { opacity: .5; }
 
-.footer__text > span { font-size: 1rem; /* 16px */ }
-
 .footer__links {
   position: relative;
   display: flex;
