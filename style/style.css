@@ -16,6 +16,7 @@
 
   --clr-primary: #ffed47;
   --clr-secondary: #e63946;
+  --clr-pink: #ff8eaf;
 
   --clr-white: #fff;
   --clr-black: #000;
@@ -165,6 +166,7 @@ body { font-family: var(--ff-lily-script-one-400); }
 .adoption__cards {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 45px;
 }
 
@@ -202,17 +204,20 @@ body { font-family: var(--ff-lily-script-one-400); }
 
 .card__pet-about {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100%;
+  color: var(--clr-pink);
+  text-shadow: 1px 0 2px var(--clr-black);
   opacity: 0; /* Hidden by default, appears when mouse is hovering the card. */
 }
 
 .card__pet-name {
   /* Title appears when mouse is hovering the card. */
   width: 0;
+  margin-bottom: 8px;
   font-size: 0;
 }
 
@@ -221,6 +226,13 @@ body { font-family: var(--ff-lily-script-one-400); }
   width: 0;
   height: 60%;
   font-size: 0;
+}
+
+.card__pet-info > strong { color: var(--clr-white); }
+
+.card__pet-info > q {
+  display: inline-block;
+  margin-top: 5px;
 }
 
 .card__pet-about > * { transition: all 300ms ease-in; }
@@ -242,7 +254,7 @@ body { font-family: var(--ff-lily-script-one-400); }
 .card:hover .card__pet-info,
 .card:focus .card__pet-info {
   width: 100%;
-  font-size: 1.25rem; /* 20px */
+  font-size: 1rem; /* 14px */
 }
 
 
