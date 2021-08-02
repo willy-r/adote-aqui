@@ -21,6 +21,8 @@
     <!-- Local CSS -->
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="style/responsive.css">
   </head>
   <body>
     <div class="container">
@@ -29,6 +31,23 @@
           <a class="logo" href="">
             <span class="fas fa-paw"></span> AdoteAqui
           </a>
+
+          <!-- This code is hidden on larger screens. -->
+          <input type="checkbox" id="check-menu">
+
+          <div class="burguer-menu">
+            <label for="check-menu">
+              <svg class="burguer" width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.375 14.875H44.625" stroke="#efef42" stroke-width="3.5" stroke-linecap="round"/>
+                <path d="M6.375 25.5H44.625" stroke="#efef42" stroke-width="3.5" stroke-linecap="round"/>
+                <path d="M6.37488 36.0625H28.0002" stroke="#efef42" stroke-width="3.5" stroke-linecap="round"/>
+              </svg>
+              <svg class="close" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23 23L3 3" stroke="#f16d6d" stroke-width="5.5" stroke-linecap="round"/>
+                <path d="M3 23L23 3" stroke="#f16d6d" stroke-width="5.5" stroke-linecap="round"/>
+              </svg>
+            </label>
+          </div> <!-- .burguer-menu -->
   
           <ul class="nav__links">
             <li>

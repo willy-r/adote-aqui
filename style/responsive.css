@@ -1,0 +1,72 @@
+/*
+  Media queries to small screens, usually 750px or less.
+  
+  1. General styles
+  2. Header
+  3. Burguer menu
+  4. Homepage section
+  5. Adoption section
+  6. Footer
+*/
+
+
+/* 450px */
+@media (max-width: 28.125em) {
+  /* 1. General styles */
+  
+  .logo { font-size: 1.75rem; }
+
+  
+  /* 2. Header */
+
+  .nav__links {
+    position: absolute;
+    top: 55px;
+    left: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: var(--clr-black);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    visibility: hidden; /* Hidden by default, changes when user clicks on the burguer menu. */
+    transition: all 300ms ease-in-out;
+  }
+
+  .nav__links > * + * {
+    margin-top: 15px;
+    margin-left: 0;
+  }
+
+  .nav__link {
+    width: 100%;
+    text-align: center;
+  }
+
+
+  /* 4. Homepage section */
+
+  .title { font-size: 3.75rem; /* 60px */ }
+
+
+  /* 3. Burguer menu */
+
+  .burguer-menu { display: block; }
+
+  .burguer-menu > label {
+    cursor: pointer;
+    transition: opacity 250ms ease-in;
+  }
+
+  .burguer-menu > label:hover { opacity: .5; }
+
+  .burguer-menu > label > .close { display: none; }
+
+  #check-menu:checked ~ .burguer-menu > label > .close { display: inline; }
+  #check-menu:checked ~ .burguer-menu > label > .burguer { display: none; }
+  
+  #check-menu:checked ~ .nav__links {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+}
