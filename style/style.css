@@ -1,7 +1,7 @@
 /*
   1. General styles
   2. Header
-  3. Burguer menu
+  3. Burger menu
   4. Homepage section
   5. Adoption section
   6. Footer
@@ -124,10 +124,10 @@ body { font-family: var(--ff-lily-script-one-400); }
 .nav__link--bgc-white:focus { color: var(--clr-white); }
 
 
-/* 3. Burguer manu
+/* 3. Burger menu
 
 /* None by default, changes on smaller screens. */
-.burguer-menu { display: none; }
+.burger-menu { display: none; }
 
 /* None forever, I don't need this. */
 #check-menu { display: none; }

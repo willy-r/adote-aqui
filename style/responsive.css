@@ -3,7 +3,7 @@
   
   1. General styles
   2. Header
-  3. Burguer menu
+  3. Burger menu
   4. Adoption section
   5. Footer
 */
@@ -23,7 +23,7 @@
     background-color: var(--clr-black);
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    visibility: hidden; /* Hidden by default, changes when user clicks on the burguer menu. */
+    visibility: hidden; /* Hidden by default, changes when user clicks on the burger menu. */
     transition: all 300ms ease-in-out;
   }
 
@@ -38,21 +38,21 @@
   }
 
 
-  /* 3. Burguer menu */
+  /* 3. Burger menu */
 
-  .burguer-menu { display: block; }
+  .burger-menu { display: block; }
 
-  .burguer-menu > label {
+  .burger-menu > label {
     cursor: pointer;
     transition: opacity 250ms ease-in;
   }
 
-  .burguer-menu > label:hover { opacity: .5; }
+  .burger-menu > label:hover { opacity: .5; }
 
-  .burguer-menu > label > .close { display: none; }
+  .burger-menu > label > .close { display: none; }
 
-  #check-menu:checked ~ .burguer-menu > label > .close { display: inline; }
-  #check-menu:checked ~ .burguer-menu > label > .burguer { display: none; }
+  #check-menu:checked ~ .burger-menu > label > .close { display: inline; }
+  #check-menu:checked ~ .burger-menu > label > .burger { display: none; }
   
   #check-menu:checked ~ .nav__links {
     visibility: visible;
